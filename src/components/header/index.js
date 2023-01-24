@@ -6,23 +6,37 @@ export default function Header(props) {
   const headings = () => {
     return (
       <>
-        {props.heading && <Text style={{ ...FONTS.h2, fontFamily: "SecondaryBold" }}>{props.heading}</Text>}        
+        {props.heading && (
+          <Text style={{ ...FONTS.h2, fontFamily: "SecondaryBold" }}>
+            {props.heading}
+          </Text>
+        )}
       </>
     );
   };
 
   return (
-    <View style={styles.header}>
+    <View
+      style={[
+        styles.header,
+        props.style2 ? { flexDirection: "row", alignItems: "center" } : null,
+      ]}
+    >
       {props.backButton && (
         <TouchableOpacity
-          activeOpacity={.7}
+          activeOpacity={0.7}
           onPress={() => props.navigation.goBack()}
-          style={styles.backButton}
+          style={[
+            styles.backButton,
+            props.style2
+              ? { marginBottom: 0, marginRight: SIZES.basePadding }
+              : null,
+          ]}
         >
           <Image
             source={icons.backArrowIcon}
             style={{ height: 20, width: 20, resizeMode: "contain" }}
-          />          
+          />
         </TouchableOpacity>
       )}
 
@@ -44,8 +58,8 @@ const styles = StyleSheet.create({
     marginBottom: SIZES.basePadding,
     borderColor: COLORS.dark10,
     borderWidth: 1,
-    borderRadius: SIZES.basePadding*2,
+    borderRadius: SIZES.basePadding * 2,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
 });

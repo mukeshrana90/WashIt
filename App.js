@@ -9,6 +9,7 @@ import {
   Login,
   ForgotPassword,
   ResetPassword,
+  NearByShops,
 } from "./src/screens";
 import Tabs from "./src/navigation/Tabs";
 
@@ -23,17 +24,15 @@ export default function App() {
     SecondaryBold: require("./assets/fonts/SpaceGrotesk-Bold.ttf"),
   });
   if (!fontsLoaded) {
-    return <Text>Loading...</Text>;
+    return <Text>Loading.....</Text>;
   } else {
     return (
-      
-
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
             headerShown: false,
           }}
-          initialRouteName={"Onboarding"}
+          initialRouteName={"Dashboard"}
         >
           <Stack.Screen name="Onboarding" component={Onboarding} />
 
@@ -42,8 +41,8 @@ export default function App() {
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
           <Stack.Screen name="ResetPassword" component={ResetPassword} />
 
-          
           <Stack.Screen name="Dashboard" component={Tabs} />
+          <Stack.Screen name="NearByShops" component={NearByShops} />
         </Stack.Navigator>
       </NavigationContainer>
     );

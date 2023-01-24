@@ -8,6 +8,7 @@ export const COLORS = {
   dark50: "#6D6D6D",
   dark10: "#DFDFDF",
   white: "#FFFFFF",
+  light: "#F1F1F1",
   transparent: "transparent",
 };
 

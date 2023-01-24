@@ -8,6 +8,8 @@ const homeIcon = require("../../assets/icons/Home.png");
 const bookingIcon = require("../../assets/icons/History.png");
 const profileIcon = require("../../assets/icons/Profile.png");
 const searchIcon = require("../../assets/icons/Search.png");
+const starIcon = require("../../assets/icons/Star.png");
+const locationIcon = require("../../assets/icons/location.png");
 
 // Services Icons
 const TailorIcon = require("../../assets/icons/Tailor.png");
@@ -27,6 +29,8 @@ export default {
   bookingIcon,
   profileIcon,
   searchIcon,
+  starIcon,
+  locationIcon,
   TailorIcon,
   DrycleanIcon,
   IroningIcon,
