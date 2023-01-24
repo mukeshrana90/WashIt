@@ -87,19 +87,18 @@ export const INPUT = {
     borderWidth: 1,
     borderColor: "#F3F2F2",
     borderStyle: "solid",
-    borderRadius: 6,
-    backgroundColor: "#FBFBFB",
+    borderRadius: SIZES.basePadding,
     paddingHorizontal: SIZES.padding * 2,
     ...FONTS.labelMM,
   },
 };
 
 export const CONTAINER = {
-    main: {
-        flex: 1,
-        backgroundColor: COLORS.white
-    }
-}
+  main: {
+    flex: 1,
+    backgroundColor: COLORS.white,
+  },
+};
 
 const appTheme = {
   COLORS,
@@ -107,7 +106,7 @@ const appTheme = {
   BUTTON,
   BUTTONTEXT,
   INPUT,
-  CONTAINER
+  CONTAINER,
 };
 
 export default appTheme;

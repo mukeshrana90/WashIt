@@ -64,7 +64,7 @@ export default function Input(props) {
             }}
           />
         </TouchableOpacity>
-      ) : null}
+      ) : null}      
     </View>
   );
 }
@@ -82,6 +82,6 @@ const styles = StyleSheet.create({
     top: 29,
     zIndex: 2,
     alignItems: "center",
-    justifyContent: "center",    
+    justifyContent: "center",
   },
 });

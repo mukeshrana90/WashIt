@@ -151,7 +151,7 @@ const Home = ({ navigation }) => {
         {Ads(adsData)}
 
         <SectionHeader title="Popular Services" />
-        {Services(serviceList)}
+        <Services data={serviceList} />
 
         <SectionHeader
           title="Near By Shops"
