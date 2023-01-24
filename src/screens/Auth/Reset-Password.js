@@ -1,5 +1,4 @@
-import {
-  SafeAreaView,
+import {  
   View,
   Text,
   StyleSheet,
@@ -8,7 +7,8 @@ import {
 } from "react-native";
 import React from "react";
 import { Formik } from "formik";
-import { BUTTON, BUTTONTEXT, SIZES } from "../../constants";
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { BUTTON, BUTTONTEXT, SIZES, CONTAINER } from "../../constants";
 import { Header, Input } from "../../components";
 
 const ResetPassword = ({ navigation }) => {
@@ -56,16 +56,12 @@ const ResetPassword = ({ navigation }) => {
     );
   };
   return (
-    <SafeAreaView style={styles.container} keyboardDismissMode="interactive">
+    <SafeAreaView style={{...CONTAINER.main}} keyboardDismissMode="interactive">
       {renderContent()}
     </SafeAreaView>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
+const styles = StyleSheet.create({  
   spacing: {
     paddingTop: Platform.OS == "android" ? SIZES.basePadding : 0,
     paddingHorizontal: SIZES.basePadding,

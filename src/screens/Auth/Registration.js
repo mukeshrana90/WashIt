@@ -1,5 +1,4 @@
 import {
-  SafeAreaView,
   View,
   Text,
   StyleSheet,
@@ -10,7 +9,8 @@ import {
 } from "react-native";
 import React from "react";
 import { Formik } from "formik";
-import { BUTTON, BUTTONTEXT, SIZES, icons } from "../../constants";
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { BUTTON, BUTTONTEXT, SIZES, icons, CONTAINER } from "../../constants";
 import { Header, Input } from "../../components";
 
 const Registration = ({ navigation }) => {
@@ -109,18 +109,14 @@ const Registration = ({ navigation }) => {
     );
   };
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.container} keyboardDismissMode="interactive">
+    <SafeAreaView style={{...CONTAINER.main}}>
+      <ScrollView style={{...CONTAINER.main}} keyboardDismissMode="interactive">
         {renderContent()}
       </ScrollView>
     </SafeAreaView>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
+const styles = StyleSheet.create({ 
   spacing: {
     paddingTop: Platform.OS == "android" ? SIZES.basePadding : 0,
     paddingHorizontal: SIZES.basePadding,

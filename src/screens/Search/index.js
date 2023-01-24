@@ -1,10 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { CONTAINER } from "../../constants"; 
 
-export default function Search() {
+const Search = () => {
   return (
-    <View>
+    <SafeAreaView style={{...CONTAINER.main}}>
       <Text>Search</Text>
-    </View>
-  )
-}
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  
+})
+export default Search;

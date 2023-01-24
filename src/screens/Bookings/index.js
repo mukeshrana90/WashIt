@@ -1,10 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { CONTAINER } from "../../constants"; 
 
-export default function Bookings() {
+const Bookings = () => {
   return (
-    <View>
+    <SafeAreaView style={{...CONTAINER.main}}>
       <Text>Bookings</Text>
-    </View>
-  )
-}
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  
+})
+export default Bookings;

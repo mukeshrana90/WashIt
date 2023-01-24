@@ -1,6 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
 import { useFonts } from "expo-font";
 
 import {

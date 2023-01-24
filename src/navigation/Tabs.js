@@ -7,7 +7,7 @@ import {
 import { isIphoneX } from "react-native-iphone-x-helper";
 import { Home, Search, Bookings, Profile } from "../screens";
 
-import { icons, COLORS, FONTS } from "../constants";
+import { icons, COLORS, FONTS, SIZES } from "../constants";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +22,7 @@ const CustomTabBar = (props) => {
             left: 0,
             right: 0,
             height: 30,
-            backgroundColor: "#ffffff",
+            backgroundColor: COLORS.white,
           }}
         ></View>
         <BottomTabBar {...props.props} />
@@ -37,12 +37,13 @@ const Tabs = () => {
   return (
     <Tab.Navigator
       screenOptions={{
+        headerShown: false,
         tabBarShowLabel: true,
         tabBarLabelStyle: {
           ...FONTS.labelXSM,
         },
         tabBarActiveTintColor: COLORS.primary,
-        tabBarInactiveTintColor: "#9999A7",
+        tabBarInactiveTintColor: COLORS.dark50,
       }}
       tabBar={(props) => <CustomTabBar props={props} />}
     >
@@ -55,8 +56,8 @@ const Tabs = () => {
               <Image
                 source={icons.homeIcon}
                 style={{
-                  height: 24,
-                  width: 24,
+                  height: SIZES.iconSize,
+                  width: SIZES.iconSize,
                   tintColor: COLORS.primary,
                 }}
               />
@@ -64,8 +65,8 @@ const Tabs = () => {
               <Image
                 source={icons.homeIcon}
                 style={{
-                  height: 24,
-                  width: 24,
+                  height: SIZES.iconSize,
+                  width: SIZES.iconSize,
                 }}
               />
             ),
@@ -81,8 +82,8 @@ const Tabs = () => {
               <Image
                 source={icons.searchIcon}
                 style={{
-                  height: 24,
-                  width: 24,
+                  height: SIZES.iconSize,
+                  width: SIZES.iconSize,
                   tintColor: COLORS.primary,
                 }}
               />
@@ -90,8 +91,8 @@ const Tabs = () => {
               <Image
                 source={icons.searchIcon}
                 style={{
-                  height: 24,
-                  width: 24,
+                  height: SIZES.iconSize,
+                  width: SIZES.iconSize,
                 }}
               />
             ),
@@ -107,8 +108,8 @@ const Tabs = () => {
               <Image
                 source={icons.bookingIcon}
                 style={{
-                  height: 24,
-                  width: 24,
+                  height: SIZES.iconSize,
+                  width: SIZES.iconSize,
                   tintColor: COLORS.primary,
                 }}
               />
@@ -116,8 +117,8 @@ const Tabs = () => {
               <Image
                 source={icons.bookingIcon}
                 style={{
-                  height: 24,
-                  width: 24,
+                  height: SIZES.iconSize,
+                  width: SIZES.iconSize,
                 }}
               />
             ),
@@ -133,8 +134,8 @@ const Tabs = () => {
               <Image
                 source={icons.profileIcon}
                 style={{
-                  height: 24,
-                  width: 24,
+                  height: SIZES.iconSize,
+                  width: SIZES.iconSize,
                   tintColor: COLORS.primary,
                 }}
               />
@@ -142,8 +143,8 @@ const Tabs = () => {
               <Image
                 source={icons.profileIcon}
                 style={{
-                  height: 24,
-                  width: 24,
+                  height: SIZES.iconSize,
+                  width: SIZES.iconSize,
                 }}
               />
             ),

@@ -9,15 +9,28 @@ const bookingIcon = require("../../assets/icons/History.png");
 const profileIcon = require("../../assets/icons/Profile.png");
 const searchIcon = require("../../assets/icons/Search.png");
 
+// Services Icons
+const TailorIcon = require("../../assets/icons/Tailor.png");
+const DrycleanIcon = require("../../assets/icons/Dryclean.png");
+const IroningIcon = require("../../assets/icons/Ironing.png");
+const LaundryIcon = require("../../assets/icons/Laundry.png");
+const BagCleanIcon = require("../../assets/icons/Bag-Clean.png");
+const ShoeCleanIcon = require("../../assets/icons/Shoe-Clean.png");
 
 export default {
-    appleIcon,
-    googleIcon,
-    eyeOpenIcon,
-    eyeCloseIcon,
-    backArrowIcon,
-    homeIcon,
-    bookingIcon,
-    profileIcon,
-    searchIcon
-}
+  appleIcon,
+  googleIcon,
+  eyeOpenIcon,
+  eyeCloseIcon,
+  backArrowIcon,
+  homeIcon,
+  bookingIcon,
+  profileIcon,
+  searchIcon,
+  TailorIcon,
+  DrycleanIcon,
+  IroningIcon,
+  LaundryIcon,
+  BagCleanIcon,
+  ShoeCleanIcon,
+};

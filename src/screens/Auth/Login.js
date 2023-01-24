@@ -1,5 +1,4 @@
-import {
-  SafeAreaView,
+import {  
   View,
   Text,
   Image,
@@ -10,12 +9,14 @@ import {
 } from "react-native";
 import React from "react";
 import { Formik } from "formik";
+import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   BUTTON,
   BUTTONTEXT,
   SIZES,
   FONTS,
   COLORS,
+  CONTAINER,
   icons,
 } from "../../constants";
 import { Header, Input } from "../../components";
@@ -23,7 +24,7 @@ import { Header, Input } from "../../components";
 const Login = ({ navigation }) => {
   const renderContent = () => {
     return (
-      <View style={styles.container}>
+      <View style={{...CONTAINER.main}}>
         <View style={styles.spacing}>
           <Header
             heading="Please login to your account"
@@ -53,7 +54,7 @@ const Login = ({ navigation }) => {
                 />
                 <TouchableOpacity
                   style={{ ...BUTTON.primary }}
-                  onPress={() => navigation.navigate("Dashboard")}                  
+                  onPress={() => navigation.replace("Dashboard")}                  
                 >
                   <Text style={{ ...BUTTONTEXT.primary }}>Sign In</Text>
                 </TouchableOpacity>
@@ -125,9 +126,9 @@ const Login = ({ navigation }) => {
     );
   };
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={{...CONTAINER.main}}>
       <ScrollView
-        style={styles.container}
+        style={{...CONTAINER.main}}
         showsVerticalScrollIndicator={false}
         keyboardDismissMode="interactive"
       >
@@ -136,11 +137,7 @@ const Login = ({ navigation }) => {
     </SafeAreaView>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
+const styles = StyleSheet.create({  
   spacing: {
     paddingTop: Platform.OS == "android" ? SIZES.basePadding : 0,
     paddingHorizontal: SIZES.basePadding,

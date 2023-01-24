@@ -14,12 +14,13 @@ import {
   SIZES,
   FONTS,
   COLORS,
+  CONTAINER
 } from "../../constants";
 
 const Onboarding = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <SafeAreaView style={styles.container}>
+    <View style={{...CONTAINER.main}}>
+      <SafeAreaView style={{...CONTAINER.main}}>
         <Image
           source={images.onboarding}
           resizeMode="cover"
@@ -84,11 +85,7 @@ const Onboarding = ({ navigation }) => {
     </View>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
+const styles = StyleSheet.create({ 
   contentWrap: {
     padding: SIZES.base * 3,
   },

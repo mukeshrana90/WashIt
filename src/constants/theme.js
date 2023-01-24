@@ -8,27 +8,28 @@ export const COLORS = {
   dark50: "#6D6D6D",
   dark10: "#DFDFDF",
   white: "#FFFFFF",
-  transparent: "transparent",  
+  transparent: "transparent",
 };
 
 export const SIZES = {
   // global sizes
   base: 8,
-  basePadding: 16,    
+  basePadding: 16,
   padding: 12,
+  iconSize: 24,
 
   // font sizes
   h1: 25,
-  h2: 22,      
+  h2: 22,
 
   // app dimensions
   width,
   height,
 };
 
-export const FONTS = {  
+export const FONTS = {
   h1: { fontSize: SIZES.h1, lineHeight: 36 },
-  h2: { fontSize: SIZES.h2, lineHeight: 30 }, 
+  h2: { fontSize: SIZES.h2, lineHeight: 30 },
 
   labelXS: { fontSize: 12, lineHeight: 14 },
   labelXSM: { fontSize: 12, lineHeight: 14, fontFamily: "SecondaryMedium" },
@@ -64,40 +65,48 @@ export const BUTTON = {
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
-  }
+  },
 };
 export const BUTTONTEXT = {
-  primary: {    
-    color: COLORS.white,    
+  primary: {
+    color: COLORS.white,
     ...FONTS.labelMM,
-    fontFamily: "SecondaryBold"
+    fontFamily: "SecondaryBold",
   },
   secondary: {
-    color: COLORS.dark,    
+    color: COLORS.dark,
     ...FONTS.labelMM,
-    fontFamily: "SecondaryBold"
-  }
+    fontFamily: "SecondaryBold",
+  },
 };
 export const INPUT = {
-    primary: {
-      height: 54,
-      marginBottom: SIZES.padding * 1.5,
-      borderWidth: 1,
-      borderColor: "#F3F2F2",
-      borderStyle: "solid",
-      borderRadius: 6,
-      backgroundColor: "#FBFBFB",
-      paddingHorizontal: SIZES.padding * 2,
-      ...FONTS.labelMM
-    },
-  };
+  primary: {
+    height: 54,
+    marginBottom: SIZES.padding * 1.5,
+    borderWidth: 1,
+    borderColor: "#F3F2F2",
+    borderStyle: "solid",
+    borderRadius: 6,
+    backgroundColor: "#FBFBFB",
+    paddingHorizontal: SIZES.padding * 2,
+    ...FONTS.labelMM,
+  },
+};
+
+export const CONTAINER = {
+    main: {
+        flex: 1,
+        backgroundColor: COLORS.white
+    }
+}
 
 const appTheme = {
   COLORS,
   FONTS,
   BUTTON,
   BUTTONTEXT,
-  INPUT
+  INPUT,
+  CONTAINER
 };
 
 export default appTheme;
