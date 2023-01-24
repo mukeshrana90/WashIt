@@ -1,20 +1,51 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import { Text, View } from "react-native";
+import { useFonts } from "expo-font";
+
+import {
+  Onboarding,
+  Registration,
+  Login,
+  ForgotPassword,
+  ResetPassword,
+} from "./src/screens";
+import Tabs from "./src/navigation/Tabs";
+
+const Stack = createStackNavigator();
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [fontsLoaded] = useFonts({
+    Regular: require("./assets/fonts/Inter-Regular.ttf"),
+    Medium: require("./assets/fonts/Inter-Medium.ttf"),
+    Bold: require("./assets/fonts/Inter-Bold.ttf"),
+    SecondaryMedium: require("./assets/fonts/SpaceGrotesk-Medium.ttf"),
+    SecondaryBold: require("./assets/fonts/SpaceGrotesk-Bold.ttf"),
+  });
+  if (!fontsLoaded) {
+    return <Text>Loading...</Text>;
+  } else {
+    return (
+      
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+          initialRouteName={"Onboarding"}
+        >
+          <Stack.Screen name="Onboarding" component={Onboarding} />
+
+          <Stack.Screen name="Registration" component={Registration} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+          <Stack.Screen name="ResetPassword" component={ResetPassword} />
+
+          
+          <Stack.Screen name="Dashboard" component={Tabs} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
+}
