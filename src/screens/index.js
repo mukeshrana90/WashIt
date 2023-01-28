@@ -10,6 +10,7 @@ import Bookings from "./Bookings";
 import Search from "./Search";
 
 import NearByShops from './Home/NearByShops'
+import ShopDetails from "./ShopDetails";
 
 export {
   Onboarding,
@@ -21,5 +22,6 @@ export {
   Profile,
   Bookings,
   Search,
-  NearByShops
+  NearByShops,
+  ShopDetails
 };

@@ -10,6 +10,7 @@ import {
   ForgotPassword,
   ResetPassword,
   NearByShops,
+  ShopDetails
 } from "./src/screens";
 import Tabs from "./src/navigation/Tabs";
 
@@ -32,7 +33,7 @@ export default function App() {
           screenOptions={{
             headerShown: false,
           }}
-          initialRouteName={"Dashboard"}
+          initialRouteName={"ShopDetails"}
         >
           <Stack.Screen name="Onboarding" component={Onboarding} />
 
@@ -43,6 +44,7 @@ export default function App() {
 
           <Stack.Screen name="Dashboard" component={Tabs} />
           <Stack.Screen name="NearByShops" component={NearByShops} />
+          <Stack.Screen name="ShopDetails" component={ShopDetails} />
         </Stack.Navigator>
       </NavigationContainer>
     );
