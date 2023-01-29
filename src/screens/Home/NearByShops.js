@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, ScrollView, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { CONTAINER, images, SIZES } from "../../constants";
 import { Header, Shops } from "../../components";
@@ -90,10 +90,11 @@ const NearByShops = ({ navigation }) => {
           style2
         />
       </View>
-      <ScrollView>{Shops(shopsList)}</ScrollView>
+      <ScrollView>
+        <Shops data={shopsList} navigation={navigation} />
+      </ScrollView>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({});
 export default NearByShops;

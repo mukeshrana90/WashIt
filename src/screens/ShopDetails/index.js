@@ -20,7 +20,7 @@ import {
   SIZES,
 } from "../../constants";
 
-const ShopDetails = (navigation) => {
+const ShopDetails = ({navigation}) => {
   const ShopData = [
     {
       name: "Hilarious Laundry",
@@ -157,9 +157,8 @@ const ShopDetails = (navigation) => {
               style={{
                 height: 200,
                 width: "100%",
-                resizeMode: "contain",
-                borderRadius: SIZES.basePadding,
-                marginTop: SIZES.base,
+                resizeMode: "cover",
+                borderRadius: SIZES.basePadding,                
               }}
             />
           </View>
@@ -182,7 +181,7 @@ const ShopDetails = (navigation) => {
           borderTopWidth: 1,
         }}
       >
-        <TouchableOpacity style={{ ...BUTTON.primary }}>
+        <TouchableOpacity style={{ ...BUTTON.primary }} onPress={() => navigation.navigate("SelectServices")}>
           <Text style={{ ...BUTTONTEXT.primary }}>Book A Laundry</Text>
         </TouchableOpacity>
       </View>

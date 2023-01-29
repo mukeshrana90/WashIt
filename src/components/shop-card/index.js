@@ -5,9 +5,16 @@ import { COLORS, FONTS, icons, SIZES } from "../../constants";
 const Shops = (props) => {
   return (
     <View style={{ paddingHorizontal: SIZES.basePadding }}>
-      {props.map((shop) => {
+      {props.data.map((shop) => {
         return (
-          <TouchableOpacity activeOpacity={.7} key={shop.id} style={styles.card}>
+          <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate("ShopDetails");
+            }}
+            activeOpacity={0.7}
+            key={shop.id}
+            style={styles.card}
+          >
             <View style={{ marginRight: SIZES.basePadding }}>
               <Image
                 source={shop.icon}

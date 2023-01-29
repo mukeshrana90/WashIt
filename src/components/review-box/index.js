@@ -44,13 +44,13 @@ const ReviewBox = (props) => {
             </View>
             <Text
               style={{
-                ...FONTS.labelS,
-                fontFamily: "Regular",
+                ...FONTS.labelSM,
                 lineHeight: 20,
+                color: COLORS.dark50,
                 marginTop: SIZES.base,
-                color: COLORS.dark,
               }}
-            >{review.review}
+            >
+              {review.review}
             </Text>
           </View>
         );
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.dark10,
     borderRadius: SIZES.basePadding,
-    marginBottom: SIZES.basePadding
+    marginBottom: SIZES.basePadding,
   },
   row: {
     flexDirection: "row",

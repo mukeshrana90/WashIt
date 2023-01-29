@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   COLORS,
@@ -159,11 +152,9 @@ const Home = ({ navigation }) => {
           seeAll={true}
           redirectTo="NearByShops"
         />
-        {Shops(shopsList)}
+        <Shops data={shopsList} navigation={navigation} />
       </ScrollView>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({});
 export default Home;
