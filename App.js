@@ -8,6 +8,7 @@ import {
   Registration,
   Login,
   ForgotPassword,
+  ChangePassword,
   ResetPassword,
   NearByShops,
   ShopDetails,
@@ -34,7 +35,7 @@ export default function App() {
           screenOptions={{
             headerShown: false,
           }}
-          initialRouteName={"Login"}
+          initialRouteName={"Onboarding"}
         >
           <Stack.Screen name="Onboarding" component={Onboarding} />
 
@@ -42,6 +43,7 @@ export default function App() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
           <Stack.Screen name="ResetPassword" component={ResetPassword} />
+          <Stack.Screen name="ChangePassword" component={ChangePassword} />
 
           <Stack.Screen name="Dashboard" component={Tabs} />
           <Stack.Screen name="NearByShops" component={NearByShops} />

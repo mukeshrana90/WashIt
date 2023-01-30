@@ -3,6 +3,7 @@ import Registration from "./Auth/Registration";
 import Login from "./Auth/Login";
 import ForgotPassword from "./Auth/Forgot-Password";
 import ResetPassword from "./Auth/Reset-Password";
+import ChangePassword from "./Auth/Change-password";
 
 import Home from "./Home";
 import Profile from "./Profile";
@@ -18,6 +19,7 @@ export {
   Login,
   ForgotPassword,
   ResetPassword,
+  ChangePassword,
   Home,
   Profile,
   Bookings,

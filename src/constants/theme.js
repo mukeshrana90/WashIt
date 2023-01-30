@@ -47,22 +47,22 @@ export const FONTS = {
 
 export const BUTTON = {
   primary: {
-    padding: SIZES.basePadding,
+    padding: SIZES.base,
     backgroundColor: COLORS.dark,
     borderRadius: SIZES.basePadding,
-    height: 50,
+    height: 54,
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
   },
   secondary: {
-    padding: SIZES.basePadding,
+    padding: SIZES.base,
     backgroundColor: COLORS.white,
     borderWidth: 1,
     borderStyle: "solid",
     borderRadius: SIZES.basePadding,
     borderColor: COLORS.dark10,
-    height: 50,
+    height: 54,
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
