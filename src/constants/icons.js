@@ -19,6 +19,14 @@ const LaundryIcon = require("../../assets/icons/Laundry.png");
 const BagCleanIcon = require("../../assets/icons/Bag-Clean.png");
 const ShoeCleanIcon = require("../../assets/icons/Shoe-Clean.png");
 
+// Items Icons
+const SuitIcon = require("../../assets/icons/Suits.png");
+const JacketIcon = require("../../assets/icons/Jackets.png");
+const TshirtIcon = require("../../assets/icons/T-shirts.png");
+const PantIcon = require("../../assets/icons/Pants.png");
+const ShortIcon = require("../../assets/icons/Shorts.png");
+const BedsheetIcon = require("../../assets/icons/Bedsheets.png");
+
 const lockIcon = require("../../assets/icons/lock.png");
 const privacyIcon = require("../../assets/icons/privacy.png");
 const faqIcon = require("../../assets/icons/faq.png");
@@ -49,5 +57,11 @@ export default {
   faqIcon,
   contactIcon,
   logoutIcon,
-  cameraIcon
+  cameraIcon,
+  SuitIcon,
+  JacketIcon,
+  TshirtIcon,
+  PantIcon,
+  ShortIcon,
+  BedsheetIcon,
 };

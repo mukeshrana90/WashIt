@@ -12,6 +12,8 @@ import Search from "./Search";
 
 import NearByShops from './Home/NearByShops'
 import ShopDetails from "./ShopDetails";
+import SelectServices from "./Order/SelectServices";
+import SelectQuantities from "./Order/SelectQuantity";
 
 export {
   Onboarding,
@@ -25,5 +27,7 @@ export {
   Bookings,
   Search,
   NearByShops,
-  ShopDetails
+  ShopDetails,
+  SelectServices,
+  SelectQuantities
 };

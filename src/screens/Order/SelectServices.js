@@ -99,7 +99,7 @@ const SelectServices = ({ navigation }) => {
       >
         <TouchableOpacity
           style={{ ...BUTTON.primary }}
-          onPress={() => navigation.navigate("SelectServices")}
+          onPress={() => navigation.navigate("SelectQuantities")}
         >
           <Text style={{ ...BUTTONTEXT.primary }}>Next</Text>
         </TouchableOpacity>

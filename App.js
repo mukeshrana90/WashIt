@@ -12,9 +12,10 @@ import {
   ResetPassword,
   NearByShops,
   ShopDetails,
+  SelectServices,
+  SelectQuantities,
 } from "./src/screens";
 import Tabs from "./src/navigation/Tabs";
-import SelectServices from "./src/screens/Order/SelectServices";
 
 const Stack = createStackNavigator();
 
@@ -49,6 +50,7 @@ export default function App() {
           <Stack.Screen name="NearByShops" component={NearByShops} />
           <Stack.Screen name="ShopDetails" component={ShopDetails} />
           <Stack.Screen name="SelectServices" component={SelectServices} />
+          <Stack.Screen name="SelectQuantities" component={SelectQuantities} />
         </Stack.Navigator>
       </NavigationContainer>
     );
