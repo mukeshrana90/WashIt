@@ -127,7 +127,7 @@ const SelectQuantities = ({ navigation }) => {
         <View style={{ flex: 2 }}>
           <TouchableOpacity
             style={{ ...BUTTON.primary }}
-            onPress={() => navigation.navigate("SelectServices")}
+            onPress={() => navigation.navigate("SelectDateTime")}
           >
             <Text style={{ ...BUTTONTEXT.primary }}>Next</Text>
           </TouchableOpacity>

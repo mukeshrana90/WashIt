@@ -10,10 +10,11 @@ import Profile from "./Profile";
 import Bookings from "./Bookings";
 import Search from "./Search";
 
-import NearByShops from './Home/NearByShops'
+import NearByShops from "./Home/NearByShops";
 import ShopDetails from "./ShopDetails";
 import SelectServices from "./Order/SelectServices";
 import SelectQuantities from "./Order/SelectQuantity";
+import SelectDateTime from "./Order/SelectDateTime";
 
 export {
   Onboarding,
@@ -29,5 +30,6 @@ export {
   NearByShops,
   ShopDetails,
   SelectServices,
-  SelectQuantities
+  SelectQuantities,
+  SelectDateTime,
 };

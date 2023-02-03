@@ -14,6 +14,7 @@ import {
   ShopDetails,
   SelectServices,
   SelectQuantities,
+  SelectDateTime
 } from "./src/screens";
 import Tabs from "./src/navigation/Tabs";
 
@@ -36,7 +37,7 @@ export default function App() {
           screenOptions={{
             headerShown: false,
           }}
-          initialRouteName={"Dashboard"}
+          initialRouteName={"SelectDateTime"}
         >
           <Stack.Screen name="Onboarding" component={Onboarding} />
 
@@ -51,6 +52,7 @@ export default function App() {
           <Stack.Screen name="ShopDetails" component={ShopDetails} />
           <Stack.Screen name="SelectServices" component={SelectServices} />
           <Stack.Screen name="SelectQuantities" component={SelectQuantities} />
+          <Stack.Screen name="SelectDateTime" component={SelectDateTime} />
         </Stack.Navigator>
       </NavigationContainer>
     );
