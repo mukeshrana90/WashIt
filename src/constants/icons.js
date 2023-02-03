@@ -3,6 +3,7 @@ const googleIcon = require("../../assets/icons/google.png");
 const eyeOpenIcon = require("../../assets/icons/eye-open-icon.png");
 const eyeCloseIcon = require("../../assets/icons/eye-close-icon.png");
 const backArrowIcon = require("../../assets/icons/back-arrow-icon.png");
+const emptyStateIcon = require("../../assets/icons/empty-state.png");
 
 const homeIcon = require("../../assets/icons/Home.png");
 const bookingIcon = require("../../assets/icons/History.png");
@@ -40,6 +41,7 @@ export default {
   eyeOpenIcon,
   eyeCloseIcon,
   backArrowIcon,
+  emptyStateIcon,
   homeIcon,
   bookingIcon,
   profileIcon,

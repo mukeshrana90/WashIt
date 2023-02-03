@@ -36,7 +36,7 @@ export default function App() {
           screenOptions={{
             headerShown: false,
           }}
-          initialRouteName={"Onboarding"}
+          initialRouteName={"Dashboard"}
         >
           <Stack.Screen name="Onboarding" component={Onboarding} />
 

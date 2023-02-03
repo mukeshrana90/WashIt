@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Header, ReviewBox, ServiceBox } from "../../components";
+import { Header, ReviewBox, ServiceBox, Slider } from "../../components";
 import {
   BUTTON,
   BUTTONTEXT,
@@ -20,7 +20,7 @@ import {
   SIZES,
 } from "../../constants";
 
-const ShopDetails = ({navigation}) => {
+const ShopDetails = ({ navigation }) => {
   const ShopData = [
     {
       name: "Hilarious Laundry",
@@ -80,6 +80,25 @@ const ShopDetails = ({navigation}) => {
     },
   ];
 
+  const Galleryimages = [
+    {
+      id: "image1",
+      url: images.shop1,
+    },
+    {
+      id: "image2",
+      url: images.shop3,
+    },
+    {
+      id: "image3",
+      url: images.shop2,
+    },
+    {
+      id: "image4",
+      url: images.shop4,
+    },
+  ];
+
   return (
     <SafeAreaView style={{ ...CONTAINER.main }}>
       <View style={{ paddingHorizontal: SIZES.basePadding }}>
@@ -90,10 +109,18 @@ const ShopDetails = ({navigation}) => {
           navigation={navigation}
         />
       </View>
-      <ScrollView>
-        {/* Slider Here */}
+      <ScrollView>        
+        <Slider>
+          {Galleryimages.map((image) => {
+            return (
+              <View key={image.id}>
+                <Image source={image.url} style={{ height: 200, width:280, resizeMode: "cover" }} />
+              </View>
+            );
+          })}
+        </Slider>
 
-        <View style={{ paddingHorizontal: SIZES.basePadding }}>
+        <View style={{ paddingHorizontal: SIZES.basePadding, marginTop: SIZES.basePadding }}>
           <Text style={styles.title}>{ShopData[0].name}</Text>
           <View
             style={{
@@ -158,7 +185,7 @@ const ShopDetails = ({navigation}) => {
                 height: 200,
                 width: "100%",
                 resizeMode: "cover",
-                borderRadius: SIZES.basePadding,                
+                borderRadius: SIZES.basePadding,
               }}
             />
           </View>
@@ -169,7 +196,7 @@ const ShopDetails = ({navigation}) => {
           </View>
           <View style={styles.spacing}>
             <Text style={styles.title}>Reviews</Text>
-            <ReviewBox data={ShopData[0].reviews}/>
+            <ReviewBox data={ShopData[0].reviews} />
           </View>
         </View>
       </ScrollView>
@@ -181,7 +208,10 @@ const ShopDetails = ({navigation}) => {
           borderTopWidth: 1,
         }}
       >
-        <TouchableOpacity style={{ ...BUTTON.primary }} onPress={() => navigation.navigate("SelectServices")}>
+        <TouchableOpacity
+          style={{ ...BUTTON.primary }}
+          onPress={() => navigation.navigate("SelectServices")}
+        >
           <Text style={{ ...BUTTONTEXT.primary }}>Book A Laundry</Text>
         </TouchableOpacity>
       </View>
