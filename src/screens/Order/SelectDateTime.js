@@ -164,7 +164,7 @@ const SelectDateTime = ({ navigation }) => {
         <View style={{ flex: 2 }}>
           <TouchableOpacity
             style={{ ...BUTTON.primary }}
-            onPress={() => navigation.navigate("SelectDateTime")}
+            onPress={() => navigation.navigate("SelectAddress")}
           >
             <Text style={{ ...BUTTONTEXT.primary }}>Next</Text>
           </TouchableOpacity>

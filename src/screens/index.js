@@ -15,6 +15,8 @@ import ShopDetails from "./ShopDetails";
 import SelectServices from "./Order/SelectServices";
 import SelectQuantities from "./Order/SelectQuantity";
 import SelectDateTime from "./Order/SelectDateTime";
+import SelectAddress from "./Order/SelectAddress";
+import OrderSummary from "./Order/OrderSummary";
 
 export {
   Onboarding,
@@ -32,4 +34,6 @@ export {
   SelectServices,
   SelectQuantities,
   SelectDateTime,
+  SelectAddress,
+  OrderSummary
 };

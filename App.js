@@ -1,6 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { Text } from "react-native";
+import { ActivityIndicator, View } from "react-native";
 import { useFonts } from "expo-font";
 
 import {
@@ -14,7 +14,9 @@ import {
   ShopDetails,
   SelectServices,
   SelectQuantities,
-  SelectDateTime
+  SelectDateTime,
+  SelectAddress,
+  OrderSummary,
 } from "./src/screens";
 import Tabs from "./src/navigation/Tabs";
 
@@ -29,7 +31,11 @@ export default function App() {
     SecondaryBold: require("./assets/fonts/SpaceGrotesk-Bold.ttf"),
   });
   if (!fontsLoaded) {
-    return <Text>Loading.....</Text>;
+    return (
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <ActivityIndicator />
+      </View>
+    );
   } else {
     return (
       <NavigationContainer>
@@ -37,7 +43,7 @@ export default function App() {
           screenOptions={{
             headerShown: false,
           }}
-          initialRouteName={"SelectDateTime"}
+          initialRouteName={"Onboarding"}
         >
           <Stack.Screen name="Onboarding" component={Onboarding} />
 
@@ -53,6 +59,8 @@ export default function App() {
           <Stack.Screen name="SelectServices" component={SelectServices} />
           <Stack.Screen name="SelectQuantities" component={SelectQuantities} />
           <Stack.Screen name="SelectDateTime" component={SelectDateTime} />
+          <Stack.Screen name="SelectAddress" component={SelectAddress} />
+          <Stack.Screen name="OrderSummary" component={OrderSummary} />
         </Stack.Navigator>
       </NavigationContainer>
     );

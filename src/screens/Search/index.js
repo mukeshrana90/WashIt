@@ -72,7 +72,7 @@ const Search = () => {
         </View>
 
         <SectionHeader title="Our Services" />
-        <Services data={serviceList} style2 />
+        <Services data={serviceList} />
       </View>
     </SafeAreaView>
   );

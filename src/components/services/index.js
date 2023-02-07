@@ -14,7 +14,6 @@ const Services = (props) => {
                 width: 75,
                 alignItems: "center",
               },
-              props.style2 ? { marginBottom: SIZES.basePadding * 1.5 } : null,
             ]}
             key={service.id}
           >
@@ -53,17 +52,9 @@ const Services = (props) => {
     }
   };
   return (
-    <>
-      {props.style2 ? (
-        <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-          {renderServices()}
-        </View>
-      ) : (
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          {renderServices()}
-        </ScrollView>
-      )}
-    </>
+    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+      {renderServices()}
+    </ScrollView>
   );
 };
 export default Services;
