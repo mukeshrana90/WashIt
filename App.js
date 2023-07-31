@@ -17,6 +17,8 @@ import {
   SelectDateTime,
   SelectAddress,
   OrderSummary,
+  Faq,
+  Privacy,
 } from "./src/screens";
 import Tabs from "./src/navigation/Tabs";
 
@@ -61,6 +63,9 @@ export default function App() {
           <Stack.Screen name="SelectDateTime" component={SelectDateTime} />
           <Stack.Screen name="SelectAddress" component={SelectAddress} />
           <Stack.Screen name="OrderSummary" component={OrderSummary} />
+
+          <Stack.Screen name="Faq" component={Faq} />
+          <Stack.Screen name="Privacy" component={Privacy} />
         </Stack.Navigator>
       </NavigationContainer>
     );

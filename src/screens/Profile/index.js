@@ -113,11 +113,17 @@ const Profile = ({ navigation }) => {
             <Image source={icons.lockIcon} style={styles.icon} />
             <Text style={styles.text}>Change Password</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.box}>
+          <TouchableOpacity 
+            style={styles.box}
+            onPress={() => navigation.navigate("Faq")}
+          >
             <Image source={icons.faqIcon} style={styles.icon} />
             <Text style={styles.text}>FAQ</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.box}>
+          <TouchableOpacity 
+            style={styles.box}
+            onPress={() => navigation.navigate("Privacy")}
+          >
             <Image source={icons.privacyIcon} style={styles.icon} />
             <Text style={styles.text}>Privacy Policy</Text>
           </TouchableOpacity>

@@ -18,6 +18,9 @@ import SelectDateTime from "./Order/SelectDateTime";
 import SelectAddress from "./Order/SelectAddress";
 import OrderSummary from "./Order/OrderSummary";
 
+import Faq from "./ExtraPages/Faq";
+import Privacy from "./ExtraPages/Privacy";
+
 export {
   Onboarding,
   Registration,
@@ -35,5 +38,7 @@ export {
   SelectQuantities,
   SelectDateTime,
   SelectAddress,
-  OrderSummary
+  OrderSummary,
+  Faq,
+  Privacy
 };
